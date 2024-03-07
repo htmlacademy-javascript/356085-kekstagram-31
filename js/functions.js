@@ -1,9 +1,5 @@
-//Функция для проверки длины строки
-const getLengthString = (string, maxLength) => {
-  for(let i = 0; i < string.length; i++) {
-    return (string.length <= maxLength);
-  }
-};
+//Функция для проверки длины строки с дефолтными значениями, короткая запись
+const getLengthString = (string = '', maxLength = 1) => string.length <= maxLength;
 
 getLengthString('проверяемая строка', 20);
 
