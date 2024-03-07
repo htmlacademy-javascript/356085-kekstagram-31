@@ -1,4 +1,4 @@
-import { photoCard, commentsCard } from './data';
+// import { photoCard, commentsCard } from './data';
 
-console.log(photoCard);
-console.log(commentsCard);
+// console.log(photoCard);
+// console.log(commentsCard);
