@@ -1,4 +1,4 @@
 // import { photoCard, commentsCard } from './data';
+import { galleryPhotoCard } from './drawing-thumbnails.js';
 
-// console.log(photoCard);
-// console.log(commentsCard);
+galleryPhotoCard();

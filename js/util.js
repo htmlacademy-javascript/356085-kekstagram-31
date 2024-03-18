@@ -21,6 +21,7 @@ const createRandomIdFromSpecifiedRange = (min, max) => {
     // Чтобы не зациклить проверку когда перебраны все идентификаторы нужно создать условие
     if (valueStore.length >= (max - min + 1)) {
       return 'Все идентификатры перебраны';
+      // return presentValue;
     }
     // 2. Проверить на уникальность. Повторить шаг 1 с помощью цикла, пока не получим уникальное число
     while (valueStore.includes(presentValue)) {
