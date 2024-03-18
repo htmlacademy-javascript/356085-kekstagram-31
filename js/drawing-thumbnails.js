@@ -32,4 +32,6 @@ const galleryPhotoCard = () => {
   pictures.appendChild(userCardFragment);
 };
 
+galleryPhotoCard();
+
 export {galleryPhotoCard};
