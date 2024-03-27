@@ -1,18 +1,21 @@
-import {photoCard} from './data.js';
+import { photoCard } from './data.js';
 
-//Модуль отрисовки миниатюр
+//Модуль рисование миниатюр
 
 const pictures = document.querySelector('.pictures');
-// console.log(pictures);
 const template = document.querySelector('#picture').content.querySelector('.picture');
+const userCardFragment = document.createDocumentFragment();
 
 // Функция отрисовки одной фотографии
 
 const drawingThumbnails = (userPhoto) => {
   const thumbnail = template.cloneNode(true);
+
   const image = thumbnail.querySelector('.picture__img');
   image.src = userPhoto.url;
   image.alt = userPhoto.description;
+
+  thumbnail.dataset.pictureId = userPhoto.id;
   // Находим лайки
   thumbnail.querySelector('.picture__likes').textContent = userPhoto.likes;
   // Находим комментарии
@@ -21,7 +24,7 @@ const drawingThumbnails = (userPhoto) => {
   return thumbnail;
 };
 
-const userCardFragment = document.createDocumentFragment();
+// Функция заполнения галереи
 
 const galleryPhotoCard = () => {
   // Цикл с помощью которого проходимся по массиву и итрисовывает максимальное количество фотографий
@@ -32,4 +35,7 @@ const galleryPhotoCard = () => {
   pictures.appendChild(userCardFragment);
 };
 
-export { galleryPhotoCard };
+const galleryPhotos = galleryPhotoCard();
+
+export { galleryPhotos };
+// export { drawingThumbnails };

@@ -1,4 +1,4 @@
-
+import { closeModalBigPhoto } from './modal-picture.js';
 // Функция получение случайного целого числа в заданном интервале включительно
 
 const getRandomNumbers = (min, max) => {
@@ -20,8 +20,8 @@ const createRandomIdFromSpecifiedRange = (min, max) => {
     let presentValue = getRandomNumbers(min, max);
     // Чтобы не зациклить проверку когда перебраны все идентификаторы нужно создать условие
     if (valueStore.length >= (max - min + 1)) {
-      return 'Все идентификатры перебраны';
-      // return presentValue;
+      // return 'Все идентификатры перебраны';
+      return presentValue;
     }
     // 2. Проверить на уникальность. Повторить шаг 1 с помощью цикла, пока не получим уникальное число
     while (valueStore.includes(presentValue)) {
@@ -34,4 +34,20 @@ const createRandomIdFromSpecifiedRange = (min, max) => {
   };
 };
 
-export { getRandomNumbers, createRandomIdFromSpecifiedRange };
+//Функция проверки нажатой клавиши
+
+// const isEscapeKey = (evt) => {
+//   return evt.key === 'Escape';
+// };
+const isEscapeKey = (evt) => evt.key === 'Escape';
+
+
+//Функция закрытыия окна по кнопке
+const onModalEscKeydown = (evt) => {
+  if (isEscapeKey(evt)) {
+    evt.preventDefault();
+    closeModalBigPhoto();
+  }
+};
+
+export { getRandomNumbers, createRandomIdFromSpecifiedRange, isEscapeKey, onModalEscKeydown };

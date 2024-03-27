@@ -50,7 +50,7 @@ const userPhotoCard = () => {
   };
   return userCard;
 };
-// Создание массива пользовательских фотографий
+// Создание массива объектов пользовательских фотографий
 const photoCard = Array.from({length: IMAGE_MAX}, userPhotoCard);
 
-export {photoCard};
+export { photoCard };

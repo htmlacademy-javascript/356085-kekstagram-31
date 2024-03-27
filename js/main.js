@@ -1,4 +1,7 @@
 // import { photoCard, commentsCard } from './data';
-import { galleryPhotoCard } from './drawing-thumbnails.js';
+// import './drawing-thumbnails.js';
+// import { galleryPhotos } from './drawing-thumbnails.js';
+import './modal-picture.js';
 
-galleryPhotoCard();
+// galleryPhotoCard;
+// console.log(galleryPhotos);
