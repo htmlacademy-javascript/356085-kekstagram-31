@@ -42,7 +42,7 @@ const createRandomIdFromSpecifiedRange = (min, max) => {
 const isEscapeKey = (evt) => evt.key === 'Escape';
 
 
-//Функция закрытыия окна по кнопке
+//Функция закрытия окна по кнопке
 const onModalEscKeydown = (evt) => {
   if (isEscapeKey(evt)) {
     evt.preventDefault();
