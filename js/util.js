@@ -1,3 +1,4 @@
+import { closeUploadForm } from './upload-form.js';
 import { closeModalBigPhoto } from './modal-picture.js';
 // Функция получение случайного целого числа в заданном интервале включительно
 
@@ -47,6 +48,7 @@ const onModalEscKeydown = (evt) => {
   if (isEscapeKey(evt)) {
     evt.preventDefault();
     closeModalBigPhoto();
+    closeUploadForm();
   }
 };
 
