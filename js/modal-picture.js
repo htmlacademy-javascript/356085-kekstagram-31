@@ -30,7 +30,7 @@ const closeModalBigPhoto = () => {
   bigPicture.classList.add('hidden');
   document.body.classList.remove('modal-open');
   // Закрытие окна по кнопке
-  document.addEventListener('keydown', onModalEscKeydown);
+  document.removeEventListener('keydown', onModalEscKeydown);
 };
 
 gallery.addEventListener('click', (evt) => {
