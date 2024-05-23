@@ -10,12 +10,6 @@ const textDescription = uploadForm.querySelector('.text__description');
 
 let errorMessage = '';
 
-// const spaces = textHashtags.oninput = () => {
-//   if(textHashtags.value.charAt(1) === ' ') {
-//     textHashtags.value = '';
-//   }
-// };
-
 // Pristine валидация полей
 
 const errors = () => errorMessage;
@@ -103,6 +97,8 @@ pristine.addValidator(
 
 uploadForm.addEventListener('submit', (evt) => {
   const isValid = pristine.validate();
+  // Убираем лишние пробели перед отправкой
+  textHashtags.value = textHashtags.value.trim().replaceAll(/s+/g, ' ');
   if (!isValid) {
     evt.preventDefault();
   }

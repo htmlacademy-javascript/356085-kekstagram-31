@@ -29,5 +29,5 @@ imgUploadCancel.addEventListener('click', () => {
   closeUploadForm();
 });
 
-export { openUploadForm, closeUploadForm };
+export { uploadForm, openUploadForm, closeUploadForm };
 
